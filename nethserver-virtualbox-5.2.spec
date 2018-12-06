@@ -56,7 +56,9 @@ perl createlinks
 rm -rf $RPM_BUILD_ROOT
 (cd root   ; find . -depth -print | cpio -dump $RPM_BUILD_ROOT)
 rm -f %{name}-%{version}-filelist
-%{genfilelist} $RPM_BUILD_ROOT > %{name}-%{version}-filelist
+%{genfilelist} $RPM_BUILD_ROOT \
+  --file /usr/libexec/nethserver/vboxdrv-CompileModule 'attr(0750,root,root)' \
+> %{name}-%{version}-filelist
 echo "%doc COPYING"  >> %{name}-%{version}-filelist
 
 %clean
