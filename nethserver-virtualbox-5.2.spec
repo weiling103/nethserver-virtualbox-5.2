@@ -70,6 +70,7 @@ rm -rf %{name}-%{version}
 %preun
 
 %post
+/usr/bin/systemctl enable vboxdrv-CompileModule.service
 
 %postun
 %files -f %{name}-%{version}-filelist
