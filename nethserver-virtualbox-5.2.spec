@@ -14,12 +14,20 @@ Prefix: %{_prefix}
 BuildArchitectures: noarch
 BuildRequires: nethserver-devtools
 Requires: VirtualBox-5.2
+Requires: gcc 
+Requires: make
+Requires: kernel-devel
+Requires: kernel-headers
+Requires: dkms
 AutoReqProv: no
 
 %description
 nethserver rpm to install virtualbox
 
 %changelog
+* Thu Dec 06 2018 stephane de Labrusse <stephdl@de-labrusse.fr> 5.2.0-1
+- Initial commit to nethserver
+
 * Wed Aug 07 2015 stephane de Labrusse <stephdl@de-labrusse.fr> 5.0.0-3
 - vboxweb-service start now at S99
 
