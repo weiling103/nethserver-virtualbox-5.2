@@ -1,9 +1,0 @@
-#!/bin/bash
-##script to compile vboxdrv kernel module if needed by virtualbox
-##stephane de Labrusse <stephdl@de-labrusse.fr>
-
-vmxnet="/lib/modules/`uname -r`/misc/vboxdrv.ko"
-
-if [ ! -e $vmxnet ]; then
-    /sbin/vboxconfig
-fi
