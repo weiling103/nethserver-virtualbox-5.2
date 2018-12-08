@@ -6,6 +6,7 @@ my $event = 'nethserver-virtualbox-5.2-update';
 #action
 event_actions ( $event, 'initialize-default-databases' => '00');
 event_actions ( $event, 'nethserver-virtualbox-create-user-vboxweb' => '10');
+event_actions ( $event, 'nethserver-virtualbox-OracleExtensionPack' => '20');
 
 #templates
 templates2events("/etc/default/virtualbox", $event);
